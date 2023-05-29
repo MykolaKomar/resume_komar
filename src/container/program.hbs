@@ -1,0 +1,52 @@
+<div>
+    <h2>EXCURSION IN PARIS</h2>
+    <main>
+
+        <div>
+            {{#with program}}
+            {{#with excursion}}
+            <h1>{{name}}</h1>
+            <div>{{location.city}}</div>
+            <div>{{location.country}}</div>
+            <div>{{date}}</div>
+            {{#each program}}
+            <div>
+                <h2>{{name}}</h2>
+            </div>
+            <div>{{type}}</div>
+            <div>{{duration}}</div>
+            {{#with details}}
+            {{#with museum}}
+            <h3>{{name}}</h3>
+            <div>{{location.address}}</div>
+            <div>{{location.city}}</div>
+            <div>{{location.country}}</div>
+            {{#each exhibits}}
+            <h3>{{name}}</h3>
+            <div>{{artist}}</div><br>
+            <div>{{description}}</div><br>
+            <div>{{audio_guide}}</div><br>
+            {{/each}}
+            {{/with}}
+            {{#with venue}}
+            <div>{{name}}</div><br>
+            <div>{{location.address}}</div><br>
+            <div>{{location.city}}</div><br>
+            <div>{{location.country}}</div><br>
+            {{/with}}
+            {{#each performers}}
+            <div>{{name}}</div><br>
+            <div>{{type}}</div><br>
+            {{/each}}
+            {{#with guide}}
+            <div>{{name}}</div><br>
+            <div>{{language}}</div><br>
+            <div>{{rating}}</div><br>
+            {{/with}}
+            {{/with}}
+            {{/each}}
+            {{/with}}
+            {{/with}}
+
+    </main>
+</div>
