@@ -5,32 +5,70 @@
         <div>
             {{#with web}}
             {{#each languages}}
-            <div>{{name}}</div><br>
-            <div>{{version}}</div><br>
-            <div>{{description}}</div><br>
+            <div>
+                <h1>{{name}}</h1>
+            </div>
+            <div>
+                <h3>{{version}}</h3>
+            </div>
+            <div>
+                <p>{{description}}</p>
+            </div>
             <hr>
             {{#each elements}}
-            <div>{{name}}</div><br>
-            <div>{{description}}</div><br>
+            <ul>
+                <li>
+                    <div>
+                        <h3>{{name}}</h3>
+                    </div>
+                </li>
+                <div>
+                    <p>{{description}}</p>
+                </div>
+            </ul>
             <hr>
             {{#each attributes}}
-            <div>{{name}}</div><br>
-            <div>{{description}}</div><br>
-            <hr>
-            {{/each}}
-            {{/each}}
-            {{#each properties}}
-            <div> {{name}}</div><br>
-            <div>{{description}}</div><br>
-            <hr>
-            {{#each values}}
-            <div>{{value}}</div><br>
-            <div>{{description}}</div><br>
-            <hr>
-            {{/each}}
-            {{/each}}
-            {{/each}}
-            {{/with}}
+            <ul>
+                <li>
+                    <div>
+                        <h3>{{name}}</h3>
+                </li>
+        </div>
+        <div>
+            <p>{{description}}</p>
+        </div>
+        </ul>
+        <hr>
+        {{/each}}
+        {{/each}}
+        {{#each properties}}
+        <ul>
+            <li>
+                <div>
+                    <h3> {{name}}</h3>
+                </div>
+            </li>
+            <div>
+                <p>{{description}}</p>
+            </div>
+        </ul>
+        <hr>
+        {{#each values}}
+        <ul>
+            <li>
+                <div>
+                    <h4>{{value}}</h4>
+            </li>
+</div>
+<div>
+    <p>{{description}}</p>
+</div>
+</ul>
+<hr>
+{{/each}}
+{{/each}}
+{{/each}}
+{{/with}}
 
-    </main>
+</main>
 </div>
