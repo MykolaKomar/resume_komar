@@ -1,0 +1,136 @@
+<div>
+    <h2>{{name}}</h2>
+    <main>
+        <p>{{description}} </p>
+        <div>
+            <ul>
+                History:
+
+                {{#with history}}
+                <br>
+                <br>
+                <li>
+                    year: <b> {{year}}</b>
+                </li>
+                <li>
+                    founder:<b> {{founder}}</b>
+                </li>
+                {{/with}}
+            </ul>
+
+        </div>
+        <hr>
+        <div>
+            <h3> Types:</h3>
+            {{#each types}}
+            <ul>
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+        <hr>
+        <div>
+            <h3> Syntax:</h3>
+            {{#with syntax}}
+            <ul>
+                <li>
+                    <h4> Variables:</h4>
+                    {{#each variables}}
+                    <ul>
+                        <li>
+                            {{this}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>
+                    <h4> Functions:</h4>
+                    {{#each functions}}
+                    <ul>
+                        <li>
+                            {{this}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>
+                    <h4> Conditionals:</h4>
+                    {{#each conditionals}}
+                    <ul>
+                        <li>
+                            {{this}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>
+                    <h4> Loops:</h4>
+                    {{#each loops}}
+                    <ul>
+                        <li>
+                            {{this}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>
+                    <h4> Classes:</h4>
+                    {{#each classes}}
+                    <ul>
+                        <li>
+                            {{this}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </li>
+            </ul>
+            {{/with}}
+        </div>
+        <hr>
+        <div>
+            <h3> Features:</h3>
+            {{#each features}}
+            <ul>
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+        <hr>
+        <div>
+            <h3> Libraries:</h3>
+            {{#each features}}
+            <ul>
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+        <hr>
+        <div>
+            <h3> Tools:</h3>
+            {{#each tools}}
+            <ul>
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+        <hr>
+        <div>
+            <h3>Community:</h3>
+            {{#each community}}
+            <ul>
+                <li>
+                    {{name}} ( {{type}})!!!!!
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+    </main>
+</div>
