@@ -1,0 +1,15 @@
+{{#with navigation}}
+  <div class='nav p-5'>
+    {{#each links}}
+    <div class='nav-item'>
+      <a href='{{href}}' class='nav-link  {{#if @last}} disabled {{/if}}'>{{text}}</a>
+    </div>
+    {{/each}}
+  </div>
+  {{/with}}
+
+  <div class="ps-5">
+    <hr>
+  </div>
+
+ 
