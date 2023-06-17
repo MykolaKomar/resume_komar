@@ -3,12 +3,11 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
     {{#with main}}
-    <main>
+    <main class="p-5">
         <section>
             <div>
-                {{> title data="Work history" big=true}},
+                {{> title data="Work history" big=false}},
             </div>
             <div>
                 <p>
@@ -46,7 +45,7 @@
                     <ul>
                         {{#each projects}}
 
-                        <li>
+                        <li class="row">
 
                             <div>
                                 {{> link text=name href=url blank=true noLine=true}}
@@ -59,7 +58,7 @@
                                 </p>
                             </div>
                             <br>
-                            <div>
+                            <div class="col-6">
                                 <div>
                                     <em>
                                         Project stacks ({{stackAmount}})
@@ -79,7 +78,8 @@
                                 </ul>
                             </div>
                             <br>
-                            <div>
+
+                            <div class="col-6">
                                 <div>
                                     <em>
                                         Project awards
@@ -113,7 +113,6 @@
 
     </main>
     {{/with}}
-</div>
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
