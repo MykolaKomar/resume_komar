@@ -41,7 +41,9 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index'
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -157,19 +159,23 @@ router.get('/education', function (req, res) {
     main: {
       educations: [
         {
-          name: 'KNUCA',
+          name: 'HOME',
           isEnd: true,
         },
         {
-          name: 'NAU',
-          isEnd: false,
-        },
-        {
-          name: 'KNUTD',
+          name: 'Shcool',
           isEnd: true,
         },
         {
-          name: 'KNUKIM',
+          name: 'KNUCA bachelor',
+          isEnd: true,
+        },
+        {
+          name: 'KNUCA magister',
+          isEnd: true,
+        },
+        {
+          name: 'KNUCA phd',
           isEnd: false,
         },
       ],
@@ -200,7 +206,7 @@ router.get('/work', function (req, res) {
   res.render('work', {
     // ↙ сюди вводимо JSON дані
 
-    layout: 'big',
+    layout: 'default',
     page: {
       title: 'Resume | Work',
     },
@@ -2789,6 +2795,39 @@ router.get('/shopreview', function (req, res) {
         },
       ],
     ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/cssLes2', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('cssLes2', {
+    layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('container', {
+    layout: 'index',
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
